@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/content'],
+  modules: ['@nuxt/eslint', '@nuxt/content', '@nuxtjs/i18n'],
 
   devtools: { enabled: true },
   compatibilityDate: '2024-11-01',
@@ -12,5 +12,31 @@ export default defineNuxtConfig({
         quotes: 'single',
       },
     },
+  },
+
+  // https://i18n.nuxtjs.org
+  i18n: {
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
+    defaultLocale: 'en',
+
+    lazy: true,
+    locales: [
+      {
+        code: 'en',
+        language: 'en-US',
+        file: 'en.json',
+        name: 'English',
+      },
+      {
+        code: 'fr',
+        language: 'fr-FR',
+        file: 'fr.json',
+        name: 'French',
+      },
+    ],
+
+    restructureDir: 'internationalization',
+    strategy: 'prefix',
+    detectBrowserLanguage: false,
   },
 })
