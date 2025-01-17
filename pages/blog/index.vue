@@ -1,13 +1,25 @@
 <script setup lang="ts">
 const path = computed(() => useRoute().path)
-const { data: article, error } = await useAsyncData('blog', () =>
+const { data, error } = await useAsyncData('blog', () =>
   queryContent(path.value).findOne(),
 )
 
 if (error.value) {
   throw createError({
     status: 404,
-    message: 'Article not found!',
+    message: 'Blog page not found!',
+  })
+}
+
+if (data.value) {
+  useHead({
+    title: data.value.title,
+    meta: [
+      {
+        name: 'description',
+        content: data.value.description,
+      },
+    ],
   })
 }
 
@@ -25,8 +37,8 @@ const { data: articles } = await useAsyncData('related-articles', async () => {
 
 <template>
   <div>
-    <ContentRenderer v-if="article" :value="article">
-      <ContentRendererMarkdown :value="article" />
+    <ContentRenderer v-if="data" :value="data">
+      <ContentRendererMarkdown :value="data" />
     </ContentRenderer>
 
     <div v-if="articles && articles.length">

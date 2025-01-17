@@ -1,5 +1,6 @@
 ---
 title: Troisième article
+description: Troisième article > Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 slug:
   en: 'third-article'
   fr: 'troisieme-article'

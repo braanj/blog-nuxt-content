@@ -1,5 +1,6 @@
 ---
 title: Premiere article
+description: Premiere article > Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 slug:
   en: 'first-article'
   fr: 'premiere-article'

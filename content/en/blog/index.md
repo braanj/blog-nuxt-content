@@ -1,5 +1,6 @@
 ---
 title: Blog
+description: A blog where you can read about what you love!
 ---
 
 ## All articles

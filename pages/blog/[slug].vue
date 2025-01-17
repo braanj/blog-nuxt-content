@@ -12,6 +12,16 @@ if (error.value) {
 }
 
 if (article.value) {
+  useHead({
+    title: article.value.title,
+    meta: [
+      {
+        name: 'description',
+        content: article.value.description,
+      },
+    ],
+  })
+
   const i18nParams = {
     en: { slug: article.value.slug.en },
     fr: { slug: article.value.slug.fr },

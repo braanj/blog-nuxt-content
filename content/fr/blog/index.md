@@ -1,5 +1,6 @@
 ---
 title: Blog
+description: Le blog où l'on peut lire tout ce que l'on veut !
 ---
 
 ## Tous les articles

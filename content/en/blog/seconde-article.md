@@ -1,5 +1,6 @@
 ---
 title: Seconde article
+description: Seconde article > Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 slug:
   en: 'seconde-article'
   fr: 'deuxieme-article'
