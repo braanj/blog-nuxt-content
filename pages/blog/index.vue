@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const path = computed(() => useRoute().path)
-const { data: article, error } = await useAsyncData('single-article', () =>
+const { data: article, error } = await useAsyncData('blog', () =>
   queryContent(path.value).findOne(),
 )
 
@@ -11,23 +11,12 @@ if (error.value) {
   })
 }
 
-if (article.value) {
-  const i18nParams = {
-    en: { slug: article.value.slug.en },
-    fr: { slug: article.value.slug.fr },
-  }
-
-  const setI18nParams = useSetI18nParams()
-  setI18nParams(i18nParams)
-}
-
 const { locale: currentLocale } = useI18n()
 const { data: articles } = await useAsyncData('related-articles', async () => {
   const data = await queryContent(currentLocale.value, 'blog')
     .where({
-      _path: { $ne: path.value }, // Ignore current article
+      _path: { $ne: path.value }, // Ignore current path
     })
-    .limit(3)
     .find()
 
   return data

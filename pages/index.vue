@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="centered">
+  <div>
     <p>{{ t('message') }}</p>
   </div>
 </template>
@@ -13,13 +13,5 @@ const { t } = useI18n()
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-.centered {
-  border: 1px solid #aeaeae;
-  height: 100svh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>
