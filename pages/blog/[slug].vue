@@ -46,21 +46,28 @@ const { data: articles } = await useAsyncData('related-articles', async () => {
 </script>
 
 <template>
-  <div>
-    <ContentRenderer v-if="article" :value="article">
+  <div v-if="article">
+    <h1>
+      {{ article.title }}
+    </h1>
+
+    <p>{{ article.description }}</p>
+
+    <div class="flex">
+      <img
+        class="cover-image"
+        :src="article.cover.src"
+        :alt="article.cover.alt"
+      />
+    </div>
+
+    <ContentRenderer :value="article">
       <ContentRendererMarkdown :value="article" />
     </ContentRenderer>
 
-    <div>
+    <div v-if="articles && articles.length">
       <h2>Articles</h2>
-
-      <div v-if="articles && articles.length">
-        <ul>
-          <li v-for="(article, key) in articles" :key="`article-${key}`">
-            <nuxt-link :to="article._path"> {{ article.title }}</nuxt-link>
-          </li>
-        </ul>
-      </div>
+      <LazyArticlesList :articles="articles" />
     </div>
   </div>
 </template>

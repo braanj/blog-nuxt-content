@@ -4,6 +4,9 @@ description: Troisième article > Lorem ipsum, dolor sit amet consectetur adipis
 slug:
   en: 'third-article'
   fr: 'troisieme-article'
+cover:
+  src: https://picsum.photos/id/254/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## Titre de niveau 2

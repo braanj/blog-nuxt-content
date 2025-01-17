@@ -1,6 +1,9 @@
 ---
 title: Blog
 description: A blog where you can read about what you love!
+cover:
+  src: https://picsum.photos/id/485/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## All articles

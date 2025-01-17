@@ -6,7 +6,7 @@ const localePath = useLocalePath()
 
 <template>
   <div class="container">
-    <div class="flex justify-between">
+    <div class="header flex justify-between">
       <NuxtLink :to="localePath('index')">
         <span>Blog Nuxt Content</span>
       </NuxtLink>
@@ -37,6 +37,30 @@ html,
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+  padding: 15px 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
 }
 
 .container {

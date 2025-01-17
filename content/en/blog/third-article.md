@@ -4,6 +4,9 @@ description: Third article > Lorem ipsum, dolor sit amet consectetur adipisicing
 slug:
   en: 'third-article'
   fr: 'troisieme-article'
+cover:
+  src: https://picsum.photos/id/326/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## Heading 2

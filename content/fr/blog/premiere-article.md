@@ -4,6 +4,9 @@ description: Premiere article > Lorem ipsum, dolor sit amet consectetur adipisic
 slug:
   en: 'first-article'
   fr: 'premiere-article'
+cover:
+  src: https://picsum.photos/id/168/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## Titre de niveau 2

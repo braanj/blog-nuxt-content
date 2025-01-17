@@ -1,6 +1,9 @@
 ---
 title: Blog
 description: Le blog où l'on peut lire tout ce que l'on veut !
+cover:
+  src: https://picsum.photos/id/125/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## Tous les articles

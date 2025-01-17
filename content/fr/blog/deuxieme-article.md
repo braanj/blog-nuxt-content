@@ -4,6 +4,9 @@ description: Deuxième article > Lorem ipsum, dolor sit amet consectetur adipisi
 slug:
   en: 'seconde-article'
   fr: 'deuxieme-article'
+cover:
+  src: https://picsum.photos/id/478/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## Titre de niveau 2

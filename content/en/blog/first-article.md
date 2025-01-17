@@ -4,6 +4,9 @@ description: First article > Lorem ipsum, dolor sit amet consectetur adipisicing
 slug:
   en: 'first-article'
   fr: 'premiere-article'
+cover:
+  src: https://picsum.photos/id/568/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## Heading 2

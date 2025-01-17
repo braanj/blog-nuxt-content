@@ -4,6 +4,9 @@ description: Seconde article > Lorem ipsum, dolor sit amet consectetur adipisici
 slug:
   en: 'seconde-article'
   fr: 'deuxieme-article'
+cover:
+  src: https://picsum.photos/id/695/1240/500.webp
+  alt: image description alternative text
 ---
 
 ## Heading 2
