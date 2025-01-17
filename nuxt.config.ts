@@ -3,7 +3,14 @@ export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/content', '@nuxtjs/i18n'],
 
   devtools: { enabled: true },
-  compatibilityDate: '2024-11-01',
+
+  content: {
+    highlight: {
+      theme: 'github-light',
+    },
+  },
+
+  compatibilityDate: '2025-01-17',
 
   // https://eslint.nuxt.com
   eslint: {

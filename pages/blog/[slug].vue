@@ -26,6 +26,7 @@ const { data: articles } = await useAsyncData('related-articles', async () => {
   const data = await queryContent(currentLocale.value, 'blog')
     .where({
       _path: { $ne: path.value }, // Ignore current article
+      _file: { $not: { $contains: 'index.md' } }, // Ignore blog index
     })
     .limit(3)
     .find()
@@ -40,12 +41,16 @@ const { data: articles } = await useAsyncData('related-articles', async () => {
       <ContentRendererMarkdown :value="article" />
     </ContentRenderer>
 
-    <div v-if="articles && articles.length">
-      <ul>
-        <li v-for="(article, key) in articles" :key="`article-${key}`">
-          <nuxt-link :to="article._path"> {{ article.title }}</nuxt-link>
-        </li>
-      </ul>
+    <div>
+      <h2>Articles</h2>
+
+      <div v-if="articles && articles.length">
+        <ul>
+          <li v-for="(article, key) in articles" :key="`article-${key}`">
+            <nuxt-link :to="article._path"> {{ article.title }}</nuxt-link>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
